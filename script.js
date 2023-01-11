@@ -8,3 +8,19 @@ burgerButton.addEventListener('click', function() {
   navMenu.classList.toggle('show');
   navMenu.classList.toggle('open');
 });
+
+const carouselSlider = document.querySelector('.carousel-slider');
+const slides = document.querySelectorAll('.carousel-slide');
+let currentSlide = 0;
+
+slides[0].style.display = 'block';
+
+function nextSlide(){
+  slides[currentSlide].style.display = 'none';
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].style.display = 'block';
+}
+
+setInterval(nextSlide, 3000);// move to next slide every 3 seconds
+ 
+
