@@ -57,6 +57,7 @@ footer {
   background-color: #333;
   color: #fff;
   text-align: center;
+  
   padding: 20px;
   width: 100%;
  
@@ -82,6 +83,7 @@ footer {
   padding: 0;
 }
 
+
 .nav-menu li {
   margin: 0 10px;
 }
@@ -89,6 +91,7 @@ footer {
 .social-media {
   display: flex;
 }
+
 
 .social-media a {
   color: #fff;
@@ -104,7 +107,95 @@ footer {
 
 .social-media a:nth-child(1) {
   color: #3b5998; /* Facebook blue */
+  
 }
+
+.social-media .fa-envelope {
+  color: red;
+}
+
+.social-media .fa-phone {
+  color: rgb(0, 228, 0);
+ 
+  
+}
+
+.products-section {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  width: 80%;
+  margin: 1%;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+}
+
+.request-product-form {
+  width: 80%;
+  margin: 3% auto;
+  text-align: center;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+form input[type="text"], form textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  }
+  
+  form input[type="submit"] {
+  width: 100%;
+  background-color: #02299f;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  }
+  
+  form input[type="submit"]:hover {
+  background-color: #45a049;
+  }
+  
+  form .form-container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  }
+  
+  form label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+  }
+  
+  form textarea {
+  min-height: 150px;
+  }
+
+
 
 .carousel-container {
   width: 100%;
@@ -117,23 +208,92 @@ footer {
 .carousel-slider {
   width: 100%;
   height: 100%;
-  display: flex;
   position: relative;
-  transition: transform 0.8s ease-in-out;
 }
 
 .carousel-slide {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
   display: none;
 }
 
+.carousel-slide.active {
+  display: block;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
 .carousel-slide img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  width: 100%; /* set the width to 100% to fill the slide container */
+  height: auto; /* preserve the aspect ratio */
+  max-width: 100%; /* this is to make sure the image doesn't exceed the container width */
+  max-height: 100%; /* this is to make sure the image doesn't exceed the container height */
+  object-fit: cover; /* scale the image to fit within the container */
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-gap: 40px; /* 20px space between each product */
+  
+}
+
+.image-container {
+  background-color: inherit;
 }
 
 @media (max-width: 800px) {
@@ -162,7 +322,10 @@ footer {
     background-color: rgb(255, 255, 255);
     
   }
+
+
 }
+
 @media (max-width: 600px) {
   body {
     font-size: 16px;
@@ -174,4 +337,47 @@ footer {
     font-size: 18px;
   }
   /* Add styles for other elements as needed */
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+   font-size: 13px;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    
+
+  }
+  
+
+  
 }
+@media screen and (max-width:768px) {
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr); /* 2 columns for screens smaller than 768px*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    
+    
+  }
+  
+}
+
+
+@media screen and (max-width:480px) {
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 column for screens smaller than 480px*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+
+  }
+ 
+}
+

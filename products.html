@@ -31,19 +31,72 @@
     </nav>
     </header>
     <main>
+      <section class="products-section">
         <h2>Our Products</h2>
-        <h3>Spark Plugs</h3>
-        <p>Keep your vehicle running smoothly with our high-quality spark plugs. Available in various sizes to fit a wide range of makes and models.</p>
-        <h3>Oil Filters</h3>
-        <p>Ensure your engine is getting the clean oil it needs with our selection of oil filters. We have filters to fit a variety of vehicles.</p>
-        <h3>Brake Pads</h3>
-        <p>Maintain the safety of your vehicle with our high-quality brake pads. We have pads to fit a variety of vehicles and driving styles.</p>
-      </main>
+
+        <div class="product-grid">
+          <div class="product">
+            <div class="image-container">
+            <img src="assets/care.jpg" alt="car care">
+            </div>
+            <h3>Car care</h3>
+            <p>Keep your car clean and fresh with these car care products</p>
+          </div>
+
+          <div class="product">
+            <img src="assets/brake.jpg" alt="brake">
+            <h3>Brakes</h3>
+            <p>We have a number brake pads and components to keep you safe</p>
+          </div>
+
+          <div class="product">
+            <img src="assets/filters.jpg" alt="Product 3">
+            <h3>Filters</h3>
+            <p> we have various filters in store let us know what you need</p>
+          </div>
+
+          <div class="product">
+            <img src="assets/oils.jpg" alt="oils and fluids">
+            <h3>oils and fluids</h3>
+            <p>we have all the oils and fluids to keep your car humming along</p>
+          </div>
+          <div class="product">
+            <img src="assets/wipers.jpg" alt="wipers">
+            <h3>wipers and washer system</h3>
+            <p>We have a number of wipers and washer system in store to keep your windows in tip top shape</p>
+          </div>
+          <div class="product">
+            <img src="assets/battery.jpg" alt="battery">
+            <h3>Batteries</h3>
+            <p>We have batteries in store and if you cant find them we will order them in for you</p>
+          </div>
+        
+        </div> <!--end of product grid (rows of 3)-->
+        
+        <div class="request-product-form">
+          <h2>Can't find what you're looking for?</h2>
+          <form>
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" name="product-name" required>
+            <label for="product-description">Product Description:</label>
+            <textarea id="product-description" name="product-description" required></textarea>
+            <label for="product-name">Car make and model/ number on MicksGarage:</label>
+            <input type="text" id="product-name" name="product-name" required>
+            <label for="contact-info">Contact Information:</label>
+            <input type="text" id="contact-info" name="contact-info" required>
+            <input type="submit" value="Submit Request">
+          </form>
+        </div>
+      </section>
+    </main>
     <footer>
-      <p>Copyright 2021 Loughrea Auto Parts</p>
+      
       <div class="social-media">
         <a href="https://www.facebook.com/loughreaautoparts"><i class="fab fa-facebook-square"></i></a>
+        <a href="mailto:loughreaautopartsweb@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:123-456-7890"><i class="fas fa-phone"></i></a>
       </div>
+      <p>Copyright 2023 Loughrea Auto Parts</p>
     </footer>
     <script src="script.js"></script>
   </body>
